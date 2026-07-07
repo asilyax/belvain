@@ -1,0 +1,70 @@
+:root {
+  --color-background-primary: #f7f4ef;
+  --color-surface-card: #f7f4ef;
+
+  --color-text-heading: #0a0a0a;
+  --color-text-subtitle: #4f4a45;
+  --color-text-body: #8a8178;
+  --color-text-eyebrow: #8a8178;
+
+  --color-text-inverse-heading: rgba(255, 255, 255, 1);
+  --color-text-inverse-subtitle: rgba(255, 255, 255, 0.95);
+  --color-text-inverse-body: rgba(255, 255, 255, 0.9);
+  --color-text-inverse-eyebrow: rgba(255, 255, 255, 0.87);
+
+  --color-accent-primary: #ced1c9;
+  --color-border-default: rgba(107, 102, 102, 0.12);
+  --color-border-light: #d8d0c5;
+  --color-rich-brown: #150904;
+
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --space-8: 32px;
+  --space-10: 40px;
+  --space-12: 48px;
+  --space-14: 56px;
+  --space-16: 64px;
+  --space-18: 72px;
+  --space-19: 78px;
+  --space-20: 80px;
+  --space-24: 96px;
+  --space-30: 120px;
+  --space-40: 160px;
+
+  --container-max-width: 1440px;
+  --container-padding-mobile: 24px;
+  --container-padding-tablet: 48px;
+  --container-padding-desktop: 96px;
+
+  --section-padding-y-mobile: 72px;
+  --section-padding-y-tablet: 96px;
+  --section-padding-y-desktop: 120px;
+
+  --radius-small: 4px;
+  --radius-medium: 12px;
+  --radius-pill: 9999px;
+
+  --shadow-default: 0px 4px 10px 3px rgba(0, 0, 0, 0.17);
+
+  --transition-duration-default: 200ms;
+  --transition-easing-default: ease;
+  --transition-default: var(--transition-duration-default) var(--transition-easing-default);
+
+  --z-index-base: 0;
+  --z-index-elevated: 10;
+  --z-index-header: 100;
+  --z-index-overlay: 200;
+  --z-index-modal: 300;
+
+  --breakpoint-mobile: 390px;
+  --breakpoint-mobile-large: 480px;
+  --breakpoint-tablet: 768px;
+  --breakpoint-tablet-large: 1024px;
+  --breakpoint-desktop: 1280px;
+  --breakpoint-desktop-large: 1440px;
+  --breakpoint-wide: 1680px;
+}

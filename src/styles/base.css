@@ -1,0 +1,92 @@
+html {
+  background: var(--color-background-primary);
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--color-background-primary);
+  color: var(--color-text-body);
+  font-family: var(--font-body);
+  font-size: var(--text-body-size);
+  font-weight: var(--text-body-weight);
+  line-height: var(--text-body-line-height);
+  min-height: 100vh;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+main {
+  display: block;
+}
+
+img,
+picture {
+  max-width: 100%;
+}
+
+img {
+  object-fit: cover;
+}
+
+svg {
+  flex-shrink: 0;
+}
+
+a {
+  color: inherit;
+  transition: color var(--transition-default), opacity var(--transition-default);
+}
+
+button {
+  color: inherit;
+  cursor: pointer;
+  transition: background-color var(--transition-default), border-color var(--transition-default),
+    color var(--transition-default), opacity var(--transition-default),
+    transform var(--transition-default);
+}
+
+button:disabled,
+input:disabled,
+textarea:disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+input,
+textarea {
+  color: inherit;
+}
+
+textarea {
+  resize: vertical;
+}
+
+ul,
+ol {
+  padding: 0;
+}
+
+::selection {
+  background: var(--color-accent-primary);
+  color: var(--color-text-heading);
+}
+
+:focus {
+  outline: none;
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-accent-primary);
+  outline-offset: 4px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}

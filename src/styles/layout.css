@@ -1,0 +1,30 @@
+.container {
+  width: 100%;
+  max-width: var(--container-max-width);
+  margin-inline: auto;
+  padding-inline: var(--container-padding-mobile);
+}
+
+.section {
+  padding-block: var(--section-padding-y-mobile);
+}
+
+@media (min-width: 768px) {
+  .container {
+    padding-inline: var(--container-padding-tablet);
+  }
+
+  .section {
+    padding-block: var(--section-padding-y-tablet);
+  }
+}
+
+@media (min-width: 1280px) {
+  .container {
+    padding-inline: var(--container-padding-desktop);
+  }
+
+  .section {
+    padding-block: var(--section-padding-y-desktop);
+  }
+}

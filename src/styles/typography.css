@@ -1,0 +1,261 @@
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500&display=swap");
+
+@font-face {
+  font-family: "Neue Haas Grotesk Display";
+  src: url("../assets/fonts/NeueHaasDisplay-Light.woff2") format("woff2");
+  font-display: swap;
+  font-style: normal;
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: "Neue Haas Grotesk Display";
+  src: url("../assets/fonts/NeueHaasDisplay-Roman.woff2") format("woff2");
+  font-display: swap;
+  font-style: normal;
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Neue Haas Grotesk Display";
+  src: url("../assets/fonts/NeueHaasDisplay-Mediu.woff2") format("woff2");
+  font-display: swap;
+  font-style: normal;
+  font-weight: 500;
+}
+
+:root {
+  --font-heading: "Neue Haas Grotesk Display", Helvetica, Arial, sans-serif;
+  --font-body: "IBM Plex Sans", Arial, Helvetica, sans-serif;
+
+  --font-weight-light: 300;
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+
+  --text-navbar-size: 16px;
+  --text-navbar-line-height: 24px;
+  --text-navbar-weight: 400;
+
+  --text-eyebrow-size: 10px;
+  --text-eyebrow-line-height: 14px;
+  --text-eyebrow-weight: 500;
+  --text-eyebrow-letter-spacing: 0.12em;
+
+  --text-h1-size: 40px;
+  --text-h1-line-height: 46px;
+  --text-h1-weight: 400;
+
+  --text-h2-size: 32px;
+  --text-h2-line-height: 38px;
+  --text-h2-weight: 400;
+
+  --text-h3-size: 24px;
+  --text-h3-line-height: 32px;
+  --text-h3-weight: 400;
+
+  --text-h4-size: 20px;
+  --text-h4-line-height: 28px;
+  --text-h4-weight: 400;
+
+  --text-h5-size: 17px;
+  --text-h5-line-height: 24px;
+  --text-h5-weight: 400;
+
+  --text-subtitle-size: 16px;
+  --text-subtitle-line-height: 26px;
+  --text-subtitle-weight: 400;
+
+  --text-body-size: 16px;
+  --text-body-line-height: 26px;
+  --text-body-weight: 400;
+
+  --text-small-size: 13px;
+  --text-small-line-height: 20px;
+  --text-small-weight: 400;
+
+  --text-caption-size: 11px;
+  --text-caption-line-height: 16px;
+  --text-caption-weight: 400;
+
+  --text-button-size: 15px;
+  --text-button-line-height: 22px;
+  --text-button-weight: 500;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.text-heading,
+.text-navbar,
+.text-link,
+.text-eyebrow,
+.text-button {
+  font-family: var(--font-heading);
+}
+
+body,
+.text-subtitle,
+.text-body,
+.text-small,
+.text-caption {
+  font-family: var(--font-body);
+}
+
+h1,
+.text-h1 {
+  color: var(--color-text-heading);
+  font-size: var(--text-h1-size);
+  font-weight: var(--text-h1-weight);
+  line-height: var(--text-h1-line-height);
+}
+
+h2,
+.text-h2 {
+  color: var(--color-text-heading);
+  font-size: var(--text-h2-size);
+  font-weight: var(--text-h2-weight);
+  line-height: var(--text-h2-line-height);
+}
+
+h3,
+.text-h3 {
+  color: var(--color-text-heading);
+  font-size: var(--text-h3-size);
+  font-weight: var(--text-h3-weight);
+  line-height: var(--text-h3-line-height);
+}
+
+h4,
+.text-h4 {
+  color: var(--color-text-heading);
+  font-size: var(--text-h4-size);
+  font-weight: var(--text-h4-weight);
+  line-height: var(--text-h4-line-height);
+}
+
+h5,
+.text-h5 {
+  color: var(--color-text-heading);
+  font-size: var(--text-h5-size);
+  font-weight: var(--text-h5-weight);
+  line-height: var(--text-h5-line-height);
+}
+
+.text-navbar {
+  font-size: var(--text-navbar-size);
+  font-weight: var(--text-navbar-weight);
+  line-height: var(--text-navbar-line-height);
+}
+
+.text-eyebrow {
+  color: var(--color-text-eyebrow);
+  font-size: var(--text-eyebrow-size);
+  font-weight: var(--text-eyebrow-weight);
+  letter-spacing: var(--text-eyebrow-letter-spacing);
+  line-height: var(--text-eyebrow-line-height);
+  text-transform: uppercase;
+}
+
+.text-subtitle {
+  color: var(--color-text-subtitle);
+  font-size: var(--text-subtitle-size);
+  font-weight: var(--text-subtitle-weight);
+  line-height: var(--text-subtitle-line-height);
+}
+
+.text-body {
+  color: var(--color-text-body);
+  font-size: var(--text-body-size);
+  font-weight: var(--text-body-weight);
+  line-height: var(--text-body-line-height);
+}
+
+.text-small {
+  font-size: var(--text-small-size);
+  font-weight: var(--text-small-weight);
+  line-height: var(--text-small-line-height);
+}
+
+.text-caption {
+  font-size: var(--text-caption-size);
+  font-weight: var(--text-caption-weight);
+  line-height: var(--text-caption-line-height);
+}
+
+.text-button {
+  font-size: var(--text-button-size);
+  font-weight: var(--text-button-weight);
+  line-height: var(--text-button-line-height);
+}
+
+@media (min-width: 768px) {
+  :root {
+    --text-navbar-size: 14px;
+    --text-navbar-line-height: 20px;
+
+    --text-eyebrow-size: 11px;
+    --text-eyebrow-line-height: 16px;
+
+    --text-h1-size: 40px;
+    --text-h1-line-height: 48px;
+
+    --text-h2-size: 40px;
+    --text-h2-line-height: 48px;
+
+    --text-h3-size: 28px;
+    --text-h3-line-height: 36px;
+
+    --text-h4-size: 22px;
+    --text-h4-line-height: 30px;
+
+    --text-h5-size: 18px;
+    --text-h5-line-height: 26px;
+
+    --text-subtitle-size: 17px;
+    --text-subtitle-line-height: 28px;
+
+    --text-body-line-height: 28px;
+
+    --text-small-size: 14px;
+    --text-small-line-height: 22px;
+
+    --text-caption-size: 12px;
+    --text-caption-line-height: 18px;
+  }
+}
+
+@media (min-width: 1280px) {
+  :root {
+    --text-navbar-size: 14px;
+    --text-navbar-line-height: 20px;
+
+    --text-eyebrow-size: 12px;
+    --text-eyebrow-line-height: 18px;
+
+    --text-h1-size: 64px;
+    --text-h1-line-height: 70px;
+
+    --text-h2-size: 48px;
+    --text-h2-line-height: 56px;
+
+    --text-h3-size: 32px;
+    --text-h3-line-height: 40px;
+
+    --text-h4-size: 24px;
+    --text-h4-line-height: 32px;
+
+    --text-h5-size: 20px;
+    --text-h5-line-height: 28px;
+
+    --text-subtitle-size: 18px;
+    --text-subtitle-line-height: 30px;
+
+    --text-body-line-height: 28px;
+
+    --text-button-size: 16px;
+    --text-button-line-height: 24px;
+  }
+}
