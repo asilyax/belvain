@@ -1,0 +1,17 @@
+.section-header {
+  display: grid;
+  gap: var(--space-4);
+}
+
+.section-header--left {
+  text-align: left;
+}
+
+.section-header--center {
+  margin-inline: auto;
+  text-align: center;
+}
+
+.section-header__description {
+  color: var(--color-text-subtitle);
+}
