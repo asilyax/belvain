@@ -44,6 +44,10 @@
   --section-padding-y-tablet: 96px;
   --section-padding-y-desktop: 120px;
 
+  --section-header-gap-eyebrow-title: 12px;
+  --section-header-gap-title-description: 22px;
+  --section-header-gap-description-supporting: 18px;
+
   --radius-small: 4px;
   --radius-medium: 12px;
   --radius-pill: 9999px;
@@ -67,4 +71,20 @@
   --breakpoint-desktop: 1280px;
   --breakpoint-desktop-large: 1440px;
   --breakpoint-wide: 1680px;
+}
+
+@media (min-width: 768px) {
+  :root {
+    --section-header-gap-eyebrow-title: 14px;
+    --section-header-gap-title-description: 24px;
+    --section-header-gap-description-supporting: 20px;
+  }
+}
+
+@media (min-width: 1280px) {
+  :root {
+    --section-header-gap-eyebrow-title: 16px;
+    --section-header-gap-title-description: 28px;
+    --section-header-gap-description-supporting: 22px;
+  }
 }

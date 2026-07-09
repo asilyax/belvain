@@ -33,13 +33,13 @@
 
 .hero__eyebrow {
   max-width: 160px;
-  margin-block-end: 12px;
+  margin-block-end: var(--section-header-gap-eyebrow-title);
   color: var(--color-text-heading);
 }
 
 .hero__title {
   max-width: 268px;
-  margin-block-end: 22px;
+  margin-block-end: var(--section-header-gap-title-description);
 }
 
 .hero__description {
@@ -84,12 +84,10 @@
 
   .hero__eyebrow {
     max-width: 165px;
-    margin-block-end: 14px;
   }
 
   .hero__title {
     max-width: 230px;
-    margin-block-end: 24px;
   }
 
   .hero__description {
@@ -112,12 +110,10 @@
 
   .hero__eyebrow {
     max-width: 165px;
-    margin-block-end: 16px;
   }
 
   .hero__title {
     max-width: 460px;
-    margin-block-end: 28px;
   }
 
   .hero__description {

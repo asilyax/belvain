@@ -1,0 +1,120 @@
+.section.longevity-redefined {
+  position: relative;
+  overflow: hidden;
+  padding-block: 0;
+  display: grid;
+  background: var(--color-background-primary);
+}
+
+.longevity-redefined__media {
+  grid-area: 1 / 1;
+  z-index: var(--z-index-base);
+  width: 100%;
+}
+
+.longevity-redefined__picture,
+.longevity-redefined__picture-image {
+  display: block;
+  width: 100%;
+}
+
+.longevity-redefined__picture-image {
+  height: auto;
+}
+
+.longevity-redefined__container {
+  grid-area: 1 / 1;
+  z-index: var(--z-index-elevated);
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.longevity-redefined .container.longevity-redefined__container {
+  max-width: none;
+  margin-inline: 0;
+  padding-block: 90px 96px;
+  padding-inline: var(--container-padding-mobile);
+}
+
+.longevity-redefined__content {
+  width: 100%;
+  text-align: left;
+}
+
+.longevity-redefined__header .section-header__eyebrow {
+  max-width: 160px;
+}
+
+.longevity-redefined__header .section-header__title {
+  max-width: 284px;
+}
+
+.longevity-redefined__header .section-header__description {
+  max-width: 312px;
+}
+
+.longevity-redefined__header .section-header__supporting-text {
+  max-width: 250px;
+}
+
+.longevity-redefined__cta {
+  margin-block-start: var(--space-12);
+}
+
+@media (max-width: 767px) {
+  .longevity-redefined--crop-bg .longevity-redefined__media {
+    position: absolute;
+    inset: 0;
+    height: 100%;
+    overflow: hidden;
+  }
+
+  .longevity-redefined--crop-bg .longevity-redefined__picture {
+    height: 100%;
+  }
+
+  .longevity-redefined--crop-bg .longevity-redefined__picture-image {
+    height: 100%;
+    object-fit: cover;
+    object-position: center center;
+  }
+}
+
+@media (min-width: 768px) {
+  .longevity-redefined .container.longevity-redefined__container {
+    width: 100%;
+    max-width: none;
+    margin-inline: 0;
+    padding-block: 0;
+    padding-inline: var(--container-padding-tablet);
+  }
+
+  .longevity-redefined__header .section-header__eyebrow {
+    max-width: 160px;
+  }
+
+  .longevity-redefined__header .section-header__title {
+    max-width: 550px;
+  }
+
+  .longevity-redefined__header .section-header__description {
+    max-width: 624px;
+  }
+
+  .longevity-redefined__header .section-header__supporting-text {
+    max-width: 556px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .longevity-redefined__header .section-header__title {
+    max-width: 510px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .longevity-redefined .container.longevity-redefined__container {
+    padding-inline: var(--container-padding-desktop);
+  }
+}

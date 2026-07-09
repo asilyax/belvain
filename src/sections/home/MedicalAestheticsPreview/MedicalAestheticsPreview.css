@@ -1,0 +1,172 @@
+.section.medical-aesthetics-preview {
+  position: relative;
+  padding-block: 0;
+  overflow: hidden;
+  background: var(--color-background-primary);
+}
+
+.medical-aesthetics-preview__media {
+  position: absolute;
+  inset: 0;
+  z-index: var(--z-index-base);
+  overflow: hidden;
+}
+
+.medical-aesthetics-preview__picture {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.medical-aesthetics-preview__picture-image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+}
+
+.medical-aesthetics-preview__container {
+  position: relative;
+  z-index: var(--z-index-elevated);
+}
+
+.medical-aesthetics-preview .container.medical-aesthetics-preview__container {
+  max-width: none;
+  margin-inline: 0;
+  padding-block: 90px 96px;
+  padding-inline: var(--container-padding-mobile);
+}
+
+.medical-aesthetics-preview__main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.medical-aesthetics-preview__intro {
+  width: 100%;
+  text-align: left;
+  align-self: flex-start;
+}
+
+.medical-aesthetics-preview__header .section-header__eyebrow {
+  max-width: 220px;
+}
+
+.medical-aesthetics-preview__header .section-header__title {
+  max-width: 254px;
+}
+
+.medical-aesthetics-preview__header .section-header__description {
+  max-width: 254px;
+}
+
+.medical-aesthetics-preview__cta {
+  margin-block-start: var(--space-19);
+}
+
+.medical-aesthetics-preview__cards {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-6);
+  align-self: center;
+  margin-block-start: var(--space-14);
+  margin-inline: auto;
+  padding: 0;
+  list-style: none;
+}
+
+.medical-aesthetics-preview__card-item {
+  margin: 0;
+}
+
+.medical-aesthetics-preview__card {
+  width: 296px;
+  height: 399px;
+  border-radius: var(--radius-medium);
+  background: var(--color-surface-card);
+  box-shadow: var(--shadow-default);
+  overflow: hidden;
+}
+
+.medical-aesthetics-preview__card-image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+@media (min-width: 768px) {
+  .medical-aesthetics-preview__picture-image {
+    object-position: center center;
+  }
+
+  .medical-aesthetics-preview .container.medical-aesthetics-preview__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    max-width: none;
+    margin-inline: 0;
+    padding-block: 140px;
+    padding-inline: var(--container-padding-tablet);
+  }
+
+  .medical-aesthetics-preview__header .section-header__eyebrow {
+    max-width: 200px;
+  }
+
+  .medical-aesthetics-preview__header .section-header__title {
+    max-width: 358px;
+  }
+
+  .medical-aesthetics-preview__header .section-header__description {
+    max-width: 397px;
+  }
+
+  .medical-aesthetics-preview__cta {
+    margin-block-start: var(--space-10);
+  }
+
+  .medical-aesthetics-preview__cards {
+    display: grid;
+    grid-template-columns: repeat(2, 296px);
+    column-gap: var(--space-8);
+    row-gap: var(--space-8);
+    justify-content: center;
+    margin-block-start: 124px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .medical-aesthetics-preview .container.medical-aesthetics-preview__container {
+    padding-block: 160px;
+  }
+
+  .medical-aesthetics-preview__header .section-header__eyebrow {
+    max-width: 220px;
+  }
+
+  .medical-aesthetics-preview__header .section-header__title {
+    max-width: 400px;
+  }
+
+  .medical-aesthetics-preview__header .section-header__description {
+    max-width: 410px;
+  }
+
+  .medical-aesthetics-preview__cards {
+    grid-template-columns: repeat(4, 296px);
+    gap: var(--space-8);
+    margin-block-start: 200px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .medical-aesthetics-preview .container.medical-aesthetics-preview__container {
+    padding-inline: var(--container-padding-desktop);
+  }
+}
