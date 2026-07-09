@@ -1,0 +1,126 @@
+.section.hero {
+  position: relative;
+  overflow: hidden;
+  padding-block: 0;
+  background: #f6e6dc;
+}
+
+.hero__media {
+  width: 100%;
+  background: var(--color-background-primary);
+}
+
+.hero__picture,
+.hero__image {
+  display: block;
+  width: 100%;
+}
+
+.hero__image {
+  height: auto;
+}
+
+.hero__container {
+  display: flex;
+  padding-block: 90px 96px;
+}
+
+.hero__content {
+  width: 100%;
+  max-width: 320px;
+  text-align: left;
+}
+
+.hero__eyebrow {
+  max-width: 160px;
+  margin-block-end: 12px;
+  color: var(--color-text-heading);
+}
+
+.hero__title {
+  max-width: 268px;
+  margin-block-end: 22px;
+}
+
+.hero__description {
+  max-width: 320px;
+}
+
+/* Tablet + desktop image zones share overlay layout from 768px. */
+@media (min-width: 768px) {
+  .hero {
+    display: grid;
+    background: var(--color-background-primary);
+  }
+
+  .hero__media {
+    grid-area: 1 / 1;
+    z-index: var(--z-index-base);
+    background: transparent;
+  }
+
+  .hero__container {
+    grid-area: 1 / 1;
+    z-index: var(--z-index-elevated);
+    align-items: center;
+    justify-content: flex-end;
+    width: 100%;
+    max-width: none;
+    padding-block: 78px 0;
+    padding-inline: var(--container-padding-tablet);
+  }
+
+  .hero__content {
+    width: auto;
+    margin-inline-start: 0;
+  }
+}
+
+/* Tablet image (768px–1279px): tablet text position and proportions. */
+@media (min-width: 768px) and (max-width: 1279px) {
+  .hero__content {
+    max-width: 324px;
+  }
+
+  .hero__eyebrow {
+    max-width: 165px;
+    margin-block-end: 14px;
+  }
+
+  .hero__title {
+    max-width: 230px;
+    margin-block-end: 24px;
+  }
+
+  .hero__description {
+    max-width: 274px;
+  }
+}
+
+/* Desktop image (1280px+): desktop text position and proportions. */
+@media (min-width: 1280px) {
+  .hero__container {
+    margin-inline: 0;
+    padding-block-start: 88px;
+    padding-inline: var(--container-padding-desktop);
+  }
+
+  .hero__content {
+    width: fit-content;
+    max-width: 690px;
+  }
+
+  .hero__eyebrow {
+    max-width: 165px;
+    margin-block-end: 16px;
+  }
+
+  .hero__title {
+    max-width: 460px;
+    margin-block-end: 28px;
+  }
+
+  .hero__description {
+    max-width: 410px;
+  }
+}

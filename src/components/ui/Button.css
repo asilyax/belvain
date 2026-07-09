@@ -1,20 +1,31 @@
 .btn {
+  box-sizing: border-box;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: fit-content;
+  width: calc(100vw - (2 * var(--space-8)));
+  margin-inline: calc(50% - 50vw + var(--space-8));
   border-radius: var(--radius-pill);
   cursor: pointer;
   font-family: var(--font-heading);
   font-size: var(--text-button-size);
   font-weight: var(--text-button-weight);
   line-height: var(--text-button-line-height);
+  text-align: center;
   text-decoration: none;
   -webkit-user-select: none;
   user-select: none;
-  white-space: nowrap;
+  white-space: normal;
   transition: background-color var(--transition-default), color var(--transition-default),
     border-color var(--transition-default);
+}
+
+@media (min-width: 768px) {
+  .btn {
+    width: fit-content;
+    margin-inline: 0;
+    white-space: nowrap;
+  }
 }
 
 .btn--md {

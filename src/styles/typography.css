@@ -34,7 +34,7 @@
 
   --text-navbar-size: 16px;
   --text-navbar-line-height: 24px;
-  --text-navbar-weight: 400;
+  --text-navbar-weight: 500;
 
   --text-eyebrow-size: 10px;
   --text-eyebrow-line-height: 14px;
@@ -43,11 +43,11 @@
 
   --text-h1-size: 40px;
   --text-h1-line-height: 46px;
-  --text-h1-weight: 400;
+  --text-h1-weight: 300;
 
   --text-h2-size: 32px;
   --text-h2-line-height: 38px;
-  --text-h2-weight: 400;
+  --text-h2-weight: 300;
 
   --text-h3-size: 24px;
   --text-h3-line-height: 32px;
@@ -59,7 +59,7 @@
 
   --text-h5-size: 17px;
   --text-h5-line-height: 24px;
-  --text-h5-weight: 400;
+  --text-h5-weight: 500;
 
   --text-subtitle-size: 16px;
   --text-subtitle-line-height: 26px;
@@ -75,7 +75,7 @@
 
   --text-caption-size: 11px;
   --text-caption-line-height: 16px;
-  --text-caption-weight: 400;
+  --text-caption-weight: 500;
 
   --text-button-size: 15px;
   --text-button-line-height: 22px;
