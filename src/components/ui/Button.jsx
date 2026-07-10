@@ -1,6 +1,6 @@
 import "./Button.css";
 
-const BUTTON_VARIANTS = ["primary", "secondary-dark", "secondary-light"];
+const BUTTON_VARIANTS = ["primary", "secondary-dark", "secondary-light", "secondary-inverse"];
 const BUTTON_SIZES = ["md"];
 
 export default function Button({

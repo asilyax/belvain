@@ -2,6 +2,7 @@ import Section from "../../../components/layout/Section";
 import Container from "../../../components/layout/Container";
 import SectionHeader from "../../../components/ui/SectionHeader";
 import Button from "../../../components/ui/Button";
+import Eyebrow from "../../../components/ui/Eyebrow";
 import { medicalAestheticsContent } from "../../../content/home/medicalAesthetics";
 import "./MedicalAestheticsPreview.css";
 
@@ -69,6 +70,36 @@ export default function MedicalAestheticsPreview() {
                     loading="lazy"
                     decoding="async"
                   />
+                  <div className="medical-aesthetics-preview__card-body">
+                    <Eyebrow className="medical-aesthetics-preview__card-eyebrow">
+                      {card.eyebrow}
+                    </Eyebrow>
+                    <h3
+                      className="medical-aesthetics-preview__card-title"
+                      style={{ maxWidth: `${card.titleMaxWidth}px` }}
+                    >
+                      {card.title}
+                    </h3>
+                    <hr
+                      className="medical-aesthetics-preview__card-divider"
+                      aria-hidden="true"
+                    />
+                    <p
+                      className="medical-aesthetics-preview__card-description text-body"
+                      style={{ maxWidth: `${card.descriptionMaxWidth}px` }}
+                    >
+                      {card.description}
+                    </p>
+                    <div className="medical-aesthetics-preview__card-footer">
+                      <Button
+                        className="medical-aesthetics-preview__card-cta"
+                        href={card.href}
+                        variant="secondary-dark"
+                      >
+                        {card.buttonLabel}
+                      </Button>
+                    </div>
+                  </div>
                 </article>
               </li>
             ))}

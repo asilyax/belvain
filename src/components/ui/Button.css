@@ -39,15 +39,21 @@
 }
 
 .btn--secondary-dark {
-  border: 1px solid var(--color-border-light);
+  border: 1px solid var(--color-text-heading);
   background: transparent;
-  color: var(--color-text-inverse-heading);
+  color: var(--color-text-heading);
 }
 
 .btn--secondary-light {
   border: 1px solid #6b6660;
   background: transparent;
   color: var(--color-text-heading);
+}
+
+.btn--secondary-inverse {
+  border: 1px solid var(--color-background-primary);
+  background: transparent;
+  color: var(--color-text-inverse-heading);
 }
 
 .btn:not(:disabled):not([aria-disabled="true"]):hover {

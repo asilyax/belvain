@@ -1,0 +1,135 @@
+.section.experiences-preview {
+  position: relative;
+  overflow: hidden;
+  padding-block: 0;
+  display: grid;
+  background: var(--color-background-primary);
+}
+
+.experiences-preview__media {
+  grid-area: 1 / 1;
+  z-index: var(--z-index-base);
+  width: 100%;
+}
+
+.experiences-preview__picture,
+.experiences-preview__picture-image {
+  display: block;
+  width: 100%;
+}
+
+.experiences-preview__picture-image {
+  height: auto;
+}
+
+.experiences-preview__container {
+  grid-area: 1 / 1;
+  z-index: var(--z-index-elevated);
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.experiences-preview .container.experiences-preview__container {
+  max-width: none;
+  margin-inline: 0;
+  padding-inline: var(--container-padding-mobile);
+}
+
+.experiences-preview__content {
+  width: 100%;
+  text-align: left;
+}
+
+.experiences-preview__header .section-header__eyebrow {
+  color: var(--color-text-inverse-eyebrow);
+  max-width: 200px;
+}
+
+.experiences-preview__header .section-header__title {
+  color: var(--color-text-inverse-heading);
+  max-width: 274px;
+}
+
+.experiences-preview__header .section-header__description {
+  color: var(--color-text-inverse-subtitle);
+  max-width: 324px;
+}
+
+.experiences-preview__header .section-header__supporting-text {
+  color: var(--color-text-inverse-body);
+  max-width: 312px;
+}
+
+.experiences-preview__cta {
+  margin-block-start: var(--space-10);
+}
+
+@media (max-width: 767px) {
+  .experiences-preview--crop-bg .experiences-preview__container {
+    padding-block: var(--space-24);
+  }
+
+  .experiences-preview--crop-bg .experiences-preview__media {
+    position: absolute;
+    inset: 0;
+    height: 100%;
+    overflow: hidden;
+  }
+
+  .experiences-preview--crop-bg .experiences-preview__picture {
+    height: 100%;
+  }
+
+  .experiences-preview--crop-bg .experiences-preview__picture-image {
+    height: 100%;
+    object-fit: cover;
+    object-position: center center;
+  }
+}
+
+@media (min-width: 768px) {
+  .experiences-preview .container.experiences-preview__container {
+    padding-inline: var(--container-padding-tablet);
+  }
+
+  .experiences-preview__header .section-header__title {
+    max-width: 450px;
+  }
+
+  .experiences-preview__header .section-header__description {
+    max-width: 635px;
+  }
+
+  .experiences-preview__header .section-header__supporting-text {
+    max-width: 558px;
+  }
+
+  .experiences-preview__cta {
+    margin-block-start: var(--space-12);
+  }
+}
+
+@media (min-width: 1280px) {
+  .experiences-preview__header .section-header__title {
+    max-width: 526px;
+  }
+
+  .experiences-preview__header .section-header__description {
+    max-width: 650px;
+  }
+
+  .experiences-preview__header .section-header__supporting-text {
+    max-width: 560px;
+  }
+
+  .experiences-preview__cta {
+    margin-block-start: var(--space-14);
+  }
+}
+
+@media (min-width: 1440px) {
+  .experiences-preview .container.experiences-preview__container {
+    padding-inline: var(--container-padding-desktop);
+  }
+}
