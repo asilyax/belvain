@@ -107,7 +107,6 @@ export default function LongevityRedefined() {
         <div ref={contentRef} className="longevity-redefined__content">
           <SectionHeader
             className="longevity-redefined__header"
-            variant="dark"
             align="left"
             headingLevel={2}
             titleId="longevity-title"

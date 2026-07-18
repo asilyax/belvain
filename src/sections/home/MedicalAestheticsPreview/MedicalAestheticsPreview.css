@@ -52,6 +52,7 @@
 }
 
 .medical-aesthetics-preview__header .section-header__eyebrow {
+  color: var(--color-text-subtitle);
   max-width: 220px;
 }
 

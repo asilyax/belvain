@@ -1,0 +1,122 @@
+.section.belvain-lab-preview {
+  position: relative;
+  overflow: hidden;
+  padding-block: 0;
+  display: grid;
+  background: var(--color-background-primary);
+}
+
+.belvain-lab-preview__media {
+  grid-area: 1 / 1;
+  z-index: var(--z-index-base);
+  width: 100%;
+}
+
+.belvain-lab-preview__picture,
+.belvain-lab-preview__picture-image {
+  display: block;
+  width: 100%;
+}
+
+.belvain-lab-preview__picture-image {
+  height: auto;
+}
+
+.belvain-lab-preview__container {
+  grid-area: 1 / 1;
+  z-index: var(--z-index-elevated);
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.belvain-lab-preview .container.belvain-lab-preview__container {
+  max-width: none;
+  margin-inline: 0;
+  padding-inline: var(--container-padding-mobile);
+}
+
+.belvain-lab-preview__content {
+  width: 100%;
+  text-align: left;
+}
+
+.belvain-lab-preview__header .section-header__eyebrow {
+  color: var(--color-text-inverse-eyebrow);
+  max-width: 130px;
+}
+
+.belvain-lab-preview__header .section-header__title {
+  color: var(--color-text-inverse-heading);
+  max-width: 315px;
+}
+
+.belvain-lab-preview__header .section-header__description {
+  color: var(--color-text-inverse-subtitle);
+  max-width: 334px;
+}
+
+.belvain-lab-preview__cta {
+  margin-block-start: 41px;
+}
+
+@media (max-width: 767px) {
+  .belvain-lab-preview--crop-bg .belvain-lab-preview__container {
+    padding-block: var(--space-24);
+  }
+
+  .belvain-lab-preview--crop-bg .belvain-lab-preview__media {
+    position: absolute;
+    inset: 0;
+    height: 100%;
+    overflow: hidden;
+  }
+
+  .belvain-lab-preview--crop-bg .belvain-lab-preview__picture {
+    height: 100%;
+  }
+
+  .belvain-lab-preview--crop-bg .belvain-lab-preview__picture-image {
+    height: 100%;
+    object-fit: cover;
+    object-position: center center;
+  }
+}
+
+@media (min-width: 768px) {
+  .belvain-lab-preview .container.belvain-lab-preview__container {
+    padding-inline: var(--container-padding-tablet);
+  }
+
+  .belvain-lab-preview__header .section-header__eyebrow {
+    max-width: 160px;
+  }
+
+  .belvain-lab-preview__header .section-header__title {
+    max-width: 380px;
+  }
+
+  .belvain-lab-preview__header .section-header__description {
+    max-width: 482px;
+  }
+
+  .belvain-lab-preview__cta {
+    margin-block-start: var(--space-12);
+  }
+}
+
+@media (min-width: 1280px) {
+  .belvain-lab-preview__header .section-header__title {
+    max-width: 475px;
+  }
+
+  .belvain-lab-preview__cta {
+    margin-block-start: var(--space-10);
+  }
+}
+
+@media (min-width: 1440px) {
+  .belvain-lab-preview .container.belvain-lab-preview__container {
+    padding-inline: var(--container-padding-desktop);
+  }
+}

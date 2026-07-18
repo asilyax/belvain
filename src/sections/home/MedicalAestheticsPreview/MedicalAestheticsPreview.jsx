@@ -42,7 +42,6 @@ export default function MedicalAestheticsPreview() {
           <div className="medical-aesthetics-preview__intro">
             <SectionHeader
               className="medical-aesthetics-preview__header"
-              variant="dark"
               align="left"
               headingLevel={2}
               titleId="medical-aesthetics-title"
