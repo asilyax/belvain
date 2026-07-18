@@ -1,9 +1,16 @@
 .section.belvain-lab-preview {
   position: relative;
-  overflow: hidden;
+  display: flex;
+  flex-direction: column;
   padding-block: 0;
-  display: grid;
   background: var(--color-background-primary);
+}
+
+.belvain-lab-preview__stage {
+  position: relative;
+  display: grid;
+  width: 100%;
+  overflow: hidden;
 }
 
 .belvain-lab-preview__media {
@@ -118,5 +125,292 @@
 @media (min-width: 1440px) {
   .belvain-lab-preview .container.belvain-lab-preview__container {
     padding-inline: var(--container-padding-desktop);
+  }
+}
+
+/* ——— Card strip ——— */
+
+.belvain-lab-preview__strip {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 406px;
+  background: var(--color-rich-brown);
+  overflow: hidden;
+}
+
+.belvain-lab-preview__strip-track {
+  flex: 1 1 auto;
+  width: 100%;
+  height: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  overscroll-behavior-x: contain;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+}
+
+.belvain-lab-preview__strip-track::-webkit-scrollbar {
+  display: none;
+}
+
+.belvain-lab-preview__strip-list {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  width: max-content;
+  min-height: 100%;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.belvain-lab-preview__strip-item {
+  flex: 0 0 auto;
+  scroll-snap-align: center;
+  scroll-snap-stop: always;
+}
+
+.belvain-lab-preview__card {
+  position: relative;
+  width: 326px;
+  height: 326px;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.belvain-lab-preview__card-image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center center;
+}
+
+.belvain-lab-preview__card-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: rgba(0, 0, 0, 0.56);
+  opacity: 0;
+  transition: opacity var(--transition-default);
+  pointer-events: none;
+}
+
+.belvain-lab-preview__card-content {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding-inline: var(--space-5);
+  text-align: left;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity var(--transition-default), visibility var(--transition-default);
+}
+
+.belvain-lab-preview__card--revealed .belvain-lab-preview__card-overlay,
+.belvain-lab-preview__card--revealed .belvain-lab-preview__card-content,
+.belvain-lab-preview__card:focus-within .belvain-lab-preview__card-overlay,
+.belvain-lab-preview__card:focus-within .belvain-lab-preview__card-content {
+  opacity: 1;
+  visibility: visible;
+}
+
+.belvain-lab-preview__card--revealed .belvain-lab-preview__card-content,
+.belvain-lab-preview__card:focus-within .belvain-lab-preview__card-content {
+  pointer-events: auto;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .belvain-lab-preview__card:hover .belvain-lab-preview__card-overlay,
+  .belvain-lab-preview__card:hover .belvain-lab-preview__card-content {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .belvain-lab-preview__card:hover .belvain-lab-preview__card-content {
+    pointer-events: auto;
+  }
+}
+
+.belvain-lab-preview__card-label {
+  max-width: 100px;
+  margin: 0;
+  color: var(--color-text-inverse-heading);
+  font-family: var(--font-body);
+  font-size: 11px;
+  font-weight: var(--font-weight-medium);
+  line-height: 14px;
+}
+
+.belvain-lab-preview__card-title {
+  max-width: 230px;
+  margin: var(--space-2) 0 0;
+  color: var(--color-text-inverse-heading);
+  font-family: var(--font-heading);
+  font-size: 18px;
+  font-weight: var(--font-weight-regular);
+  letter-spacing: 0.06em;
+  line-height: 26px;
+}
+
+.belvain-lab-preview__card-description {
+  max-width: 248px;
+  margin: var(--space-2) 0 0;
+  color: var(--color-text-inverse-heading);
+  font-family: var(--font-body);
+  font-size: 14px;
+  font-weight: var(--font-weight-regular);
+  letter-spacing: 0.1em;
+  line-height: 22px;
+}
+
+.belvain-lab-preview__card-cta.btn {
+  box-sizing: border-box;
+  width: 100%;
+  height: 44px;
+  margin-block-start: 28px;
+  margin-inline: 0;
+  padding-block: 0;
+  padding-inline: var(--space-6);
+  color: var(--color-text-inverse-heading);
+}
+
+.belvain-lab-preview__strip-arrow {
+  position: absolute;
+  top: 50%;
+  z-index: var(--z-index-elevated);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: var(--color-text-inverse-heading);
+  cursor: pointer;
+  transform: translateY(-50%);
+  transition: opacity var(--transition-default);
+}
+
+.belvain-lab-preview__strip-arrow:not(:disabled):hover {
+  opacity: 1;
+}
+
+.belvain-lab-preview__strip-arrow:not(:disabled) {
+  opacity: 0.85;
+}
+
+.belvain-lab-preview__strip-arrow:disabled {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.belvain-lab-preview__strip-arrow--prev {
+  left: 4px;
+}
+
+.belvain-lab-preview__strip-arrow--next {
+  right: 4px;
+}
+
+.belvain-lab-preview__strip-arrow-icon {
+  display: block;
+  width: 14px;
+  height: 24px;
+}
+
+@media (min-width: 768px) {
+  .belvain-lab-preview__strip {
+    height: 374px;
+  }
+
+  .belvain-lab-preview__strip-list {
+    gap: 28px;
+  }
+
+  .belvain-lab-preview__card {
+    width: 278px;
+    height: 278px;
+  }
+
+  .belvain-lab-preview__card-content {
+    padding: var(--space-6);
+  }
+
+  .belvain-lab-preview__card-title {
+    max-width: 228px;
+  }
+
+  .belvain-lab-preview__card-description {
+    max-width: 224px;
+    margin-block-start: 10px;
+  }
+
+  .belvain-lab-preview__card-cta.btn {
+    width: fit-content;
+    height: 44px;
+    margin-block-start: 14px;
+  }
+
+  .belvain-lab-preview__strip-arrow {
+    width: 44px;
+    height: 44px;
+  }
+
+  .belvain-lab-preview__strip-arrow--prev {
+    left: 20px;
+  }
+
+  .belvain-lab-preview__strip-arrow--next {
+    right: 20px;
+  }
+
+  .belvain-lab-preview__strip-arrow-icon {
+    width: 20px;
+    height: 32px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .belvain-lab-preview__strip {
+    height: 472px;
+  }
+
+  .belvain-lab-preview__strip-list {
+    gap: var(--space-8);
+  }
+
+  .belvain-lab-preview__card {
+    width: 360px;
+    height: 360px;
+  }
+
+  .belvain-lab-preview__card-content {
+    padding-block: 0;
+    padding-inline: var(--space-6);
+  }
+
+  .belvain-lab-preview__card-title {
+    max-width: 260px;
+  }
+
+  .belvain-lab-preview__card-description {
+    max-width: 260px;
+    margin-block-start: var(--space-3);
+  }
+
+  .belvain-lab-preview__card-cta.btn {
+    height: 46px;
+    margin-block-start: 18px;
   }
 }
